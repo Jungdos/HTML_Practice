@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://showcases.yalco.kr/html-css/01-06/table.css">
+  <title>표 사용하기</title>
+</head>
+<body>
+  
+  <table>
+    <caption>
+      1에서 9까지의 숫자들</caption>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </table>
+
+
+
+  <!-- 
+    태그	|        설명	      |비고
+<table>	테이블	
+<caption>	표 설명 또는 제목	 /선택사항
+<tr>	테이블의 행	
+<td>	테이블의 데이터 셀	
+
+
+  table>caption+(tr>td*3)*3 이런식으로 한다면
+
+  <table>
+    <caption></caption>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+-->
+
+<table>
+  <caption>웹 개발 공부 기록</caption>
+  <thead>
+    <tr>
+      <th>과목</th>
+      <th>월</th>
+      <th>화</th>
+      <th>수</th>
+    </tr>
+  </thead>
+ 
+<tbody>
+  <tr>
+    <th>HTML</th>
+    <td>60분</td>
+    <td>60분</td>
+    <td>0분</td>
+  </tr>
+</tbody>
+
+<tbody>
+  <tr>
+    <th>CSS</th>
+    <td>0분</td>
+    <td>30분</td>
+    <td>69분</td>
+  </tr>
+</tbody>
+
+<tbody>
+  <tr>
+    <th>JS</th>
+    <td>0분</td>
+    <td>0분</td>
+    <td>60분</td>
+  </tr>
+</tbody> 
+
+<tfoot>
+  <tr>
+    <th>총 시간</th>
+    <td>60분</td>
+    <td>90분</td>
+    <td>120분</td>
+  </tr>
+</tfoot>
+</table>
+
+<!--
+#  table>caption+(thead>tr>th*4)+(tbody>(tr>(th+td*3)))*3+tfoot>(tr>th+td*3)
+라는 표를 쓰면 위와 같이 된다. 굳이 에맷 으로 저렇게 다 나열하는건 오히려 더 어려울수도있으니
+참고하자.(따로따로 써도 된다는 말)
+
+
+#   태그	   |      설명	     |      비고
+  <thead>	    테이블의 헤더 부분	    <tbody> 앞에 와야 함
+  <tbody>	    테이블의 본문	          본 내용을 담음
+  <tfoot>	    테이블의 푸터 부분	    <tbody> 뒤에 와야 함
+  <th>	      열 또는 행의 헤더	        scope 속성으로 row, col 중 선택
+  </body>
+  </html>
+
+<!--
+# thead 에는 맨위 가로열
+  tbody 에는 가운내 내용부분 
+  tfoot 에는 마지막 줄 가로열 
+  쉽게 말해 시작은 thead 로 시작해서 
+  본문의 내용은 전부 tbody 로 끝내고
+  마무리를 tfoot 으로 진행하면 된다.
+
+
+
+  # 위처럼 에맷으로 쓰고싶다면 개념을 먼저 이해하자
+1>2 는 1의 자식인 2를 만들어 내는것이며
+복합적인경우에는 () 를 사용하여 이안에
+(thead >(안에) tr(안에) th*4(tr을 4개)) 여기서 연속적으로 넣고싶다면 + 를 이용하자
+위에 결과만 보면
+
+<thead>
+  <th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </th>
+</thead>
+
+이런 결과이다. thead 안에 tr 이 한개 그안에 th가 4개 있는걸 볼수있다.
+그럼 이다음은 사이트를 안보고 직접 한번 만들어보자
+나의 하루일과를 적어보고싶다.
+일정/ 수요일
+시간대 순으로
+-->
+
+
+<table>
+  <caption>수요일의 일과
+  </caption>
+<thead>
+  <tr>
+    <th scope="col"> 요일</th>
+    <td scope="col"> 수</td>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+    <th scope="row"> 오전 9시</th> 
+      <td>윗몸일으키기</td>
+  </tr>
+  
+</tbody>
+
+<tbody>
+  <tr>
+    <th scope="row"> 오전 10시</th>
+    <td>아침 식사</td>
+  </tr>
+</tbody>
+
+<tbody>
+  <tr>
+    <th scope="row"> 오후 12시 까지</th>
+    <td>게임 및 자유시간</td>
+  </tr>
+</tbody>
+
+<tbody>
+  <tr>
+    <th scope="row"> 오후 1시</th>
+    <td>점심식사</td>
+  </tr>
+</tbody>
+
+<tfoot>
+  <tr>
+    <th scope="row"> 오후 2시부터</th>
+    <td>공부하기.HTML</td>
+  </tr>
+</tfoot>
+
+
+
+<!--
+실제로 해보니까 tr과 th td 사용법도 많이 해깔렸고
+th 와 td 부분을 애맷으로 하나씩하고싶었는데 
+처음 내가했던방법은 tbody>tr>th>td였다. 그랬더니 
+<tbody>
+  <tr>
+    <th></th>
+  </tr>
+</tbody>td
+이렇게 나와서 좀 당황스러워서 어떻게하지? 하는순간 + 가 생각났다.
+
+tbody>tr>th+td 이렇게 하니까
+
+<tbody>
+  <tr>
+    <th></th>
+    <td></td>
+  </tr>
+</tbody>
+
+이런 만족스러운 결과값이 나왔고. 이것을 응용해서 td 값을 늘려간다면 수요일이아닌 
+월화수목금토 다할수있을껏같았다. 
+
+그리고 tbody를 더 사용할수록 시간대를 좀더 많이 다양하게 넣을수있다는걸 꺠달았다.
+
+-->
+
+
+
+<!--  열의 머리는 scope 을 col 이라고 부르고
+행의 머리는 scope 을 row 라고 한다.
+  시스템상 인식이므로 앞으로 정상적인 사이트 개발에 있어선
+  이러한 용어들을 붙여주자.
+-->
+
+
+<table>
+  <tr>
+    <td>1</td>
+    <td colspan="2" >2</td>
+    
+    <td>1</td>
+  </tr>
+  <tr>
+    <td rowspan="3" >3</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    
+    <td>1</td>
+    <td colspan="2" rowspan="2" >4</td>
+    
+  </tr>
+  <tr>
+    
+    <td>1</td>
+    
+    
+  </tr>
+</table>
+
+
+<!-- 
+#
+속성	설명
+colspan	열 병합
+rowspan	행 병합
+
+각각의 행과 열이 어디에 위치하는지 빠르게 숙지하자 그래야
+안겹치고 지우고 병합할수있으니까!
+-->
