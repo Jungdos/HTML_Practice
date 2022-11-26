@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자로부터 입력 받기</title>
+</head>
+<body>
+
+<form
+  action="./8강.html"
+  method="get"
+>
+
+  <label for="name">이름</label> 
+  <input id="name" name="my_name" type="text">
+
+<br><br><br>
+
+  <label for="password">비밀번호</label>
+  <input id="password" name="mu_password" type="password">
+
+<br><br><br>
+
+  <button type="submit">제출</button>
+  <button type="reset">초기화</button>
+</form>
+
+<!--
+    태그	설명	비고
+<form>	정보를 제출하기 위한 태그들을 포함	autocomplete 속성: 자동완성 여부 (기본: on)
+<input>	입력을 받는 요소	type 속성을 통해 다양화
+<label>	인풋 요소마다의 라벨	for 속성값을 인풋 요소의 id와 연결. 인풋의 클릭 영역 확장
+<button>	버튼	type 속성에 submit(제출), reset(초기화), button(기본 동작 없음)
+
+
+  -->
+
+<form>
+  <fieldset>
+    <legend>금상</legend>
+
+    <label for="name">이름 &nbsp; &nbsp;</label>
+    <input id="name" name="name_금상" type="text"> <br>
+    <label for="email">이메일&nbsp;</label>
+    <input id="name" name="email" type="email">
+  </fieldset>
+
+<fieldset>
+  <legend>은상</legend>
+
+    <label for="name">이름 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input id="name" name="name_은상" type="text"> <br>
+    <label for="password">비밀번호</label>
+    <input id="password" name="비밀번호" type="password">
+  </fieldset>
+
+<fieldset disabled>
+  <legend>동상</legend>
+    <label for="name">이름 </label>
+    <input id="name" name="name_동상" type="text">
+
+  </fieldset>
+</form>
+
+<!--
+태그	       |                 설명	                   |    비고
+<fieldset>	| 폼 태그 내 입력요소와 라벨들을 그룹화	     |disabled 속성: 포함된 입력요소 비활성화
+<legend>	  | 필드셋 요소의 제목 또는 설명
+-->
+
+
+<!--
+텍스트 관련 인풋 속성들
+속성	           |설명	                      |비고
+placeholder     |빈 칸에 보이는 안내문	
+maxlength	      |최대 길이	
+minlength	      |최소 길이	위반시             |submit이 거부됨
+-->
+
+
+
+
+
+</body>
+</html>
