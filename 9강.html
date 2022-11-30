@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자로부터 입력 받기(2)</title>
+</head>
+<body>
+  
+<h1>텍스트 관련 인풋 타입</h1>
+
+<form action="./9강.html">
+  <label for="txtip">text</label> <br>
+  <input
+    id="txtip"
+    type="text"
+    placeholder="넌 할수있어"
+    maxlength="5"
+    >
+    
+  <br><br>
+
+  <label for="pwdip">password</label> <br>
+  <input
+  id="pwdip"
+  type="password"
+  placeholder="네글자보단 많이해야지"
+  minlength="4"
+  >
+
+  <br><br>
+
+  <label for="srchip">search</label> <br>
+  <input
+  id="srchip" type="search"
+  >
+
+  <br><br>
+
+  <label for="telip">tel</label> <br>
+  <input
+  id="telip" type="tel"1
+  >
+
+
+<br><br><br>
+
+  <button type="submit">제출</button>
+</form>
+
+<!--
+
+#  텍스트 관련 인풋 속성들
+속성	          |설명	                      |비고
+placeholder	    |빈 칸에 보이는 안내문	
+maxlength	      |최대 길이	
+minlength	      |최소 길이	                  |위반시 submit이 거부됨
+-->
+
+<!--
+
+#id 와 type 이 같아야지 같은항목으로 인식할수있다. 안내문같은경우는 실생활에서도
+많이 쓰이므로 유의하자!
+# 라벨의 for은 ip타입이라는걸 기억하자.(해당타입에 맞는 IP)
+-->
+
+<br><br><br>
+
+
+<form action="./9강.html">
+<h1>숫자 관련 인풋 타입</h1> <br>
+<form action="./9강.html">
+  <label for="numip">number</label> <br>
+  <input
+  id="numip"
+  type="number"
+  min="0"
+  max="25"
+  >
+
+<br><br>
+
+  <label for="rgip">range</label> <br>
+  <input
+  id="rgip"
+  type="range"
+  min="0"
+  max="100"
+  step="2"
+  >
+
+<br><br>
+
+  <label for="dtip">date</label> <br>
+  <input
+  id="dtip"
+  type="date"
+  >
+<!-- 
+@시간 관련 다른 타입들 각각 min과 max 입력방법!
+
+#date 타입은 
+년,월,일 까지 입력가능
+
+#datetime-local은
+년,월,일,시간 까지 입력가능
+<input type="datetime-local" id="meeting-time"
+      name="meeting-time" value="2018-06-12T19:30"
+      min="2018-06-07T00:00" max="2018-06-14T00:00">
+
+#month 는
+년,월 까지 입력가능
+<input type="month" id="start" name="start"
+      min="2018-03" value="2018-05">
+
+#week 은
+년,N번쨰 주 입력가능
+<input type="week" name="week" id="camp-week"
+      min="2018-W18" max="2018-W26" required>
+      
+#time 은
+시간 입력가능
+<input type="time" id="appt" name="appt"
+      min="09:00" max="18:00" required>
+
+<small>Office hours are 9am to 6pm</small>
+-->
+
+<!--
+
+  숫자 관련 인풋 속성들
+속성	설명	비고
+min	최소값	date 등 타입마다 형식 다름
+max	최대값	date 등 타입마다 형식 다름
+step	간격	
+-->
+
+<br><br><br>
+
+<h1>체크 관련 인풋 타입</h1> <br>
+
+<h2>checkbox</h2>
+<input
+id="cbip"
+type="checkbox"
+checked
+>
+<label for="cdip">유기농</label>
+
+<br><br><br>
+
+<h2>radio</h2>
+<input
+type="radio"
+name="fluit"
+id="f_apple"
+value="apple"
+checked
+>
+<label for="f_apple">사과</label>
+
+<input
+type="radio"
+name="fluit"
+id="f_grape"
+value="grape"
+>
+<label for="f_grape">포도</label>
+
+<input
+type="radio"
+name="fluit"
+id="f_orange"
+value="orange"
+>
+<label for="f_orange">오렌지</label>
+
+<br>
+
+<input
+type="radio"
+name="vage"
+id="v_carrot"
+value="carrot"
+checked
+>
+<label for="v_carrot">당근</label>
+
+<input
+type="radio"
+name="vage"
+id="v_tomato"
+value="tomato"
+>
+<label for="v_tomato">토마토</label>
+
+<input
+type="radio"
+name="vage"
+id="v_eggplant"
+value="eggplant"
+>
+<label for="v_eggplant">가지</label>
+
+
+
+
+<!--
+
+  체크 관련 인풋 속성들
+속성	        |   타입	                       |      설명
+checked	      | 체크박스 & 라디오	            |  체크됨 여부
+name	        |라디오 (다른 타입들에서도 사용)	 | 옵션들의 그룹으로 사용됨
+value	        | 라디오 (다른 타입들에서도 사용)	 | 각 옵션마다 실제로 넘겨질 값
+
+-->
+
+<!--
+
+#체크 관련된 레이블은 인풋보다 뒤에 오도록한다.
+
+#cheaked 를 인풋옵션에 넣으면 페이지 시작시 자동으로 체크가 되도록한다.
+
+#한그룹에서 하나만 선택하게끔 하려면 같은 name으로 묶어줘야한다.
+
+
+#value 는 서버로 넘어갈떄의 시스템값을 정한다
+
+#name 값은 라디오 에서 그룹화하는 추가적인기능이 있다.
+
+-->
+
+<br><br><br>
+
+<label for="fileip">file</label> <br>
+<input
+id="fileip"
+type="file"
+accept="txt"
+>
+
+<br>
+
+<label for="hdnip">hidden</label> <br>
+<input
+id="hndip"
+type="hidden"
+>
+
+<br>
+
+<label for="emlip">email</label> <br>
+<input
+id="emlip"
+type="email"
+>
+
+<br>
+
+<button type="submit">제출</button>
+<!--
+
+  파일 인풋 속성들
+속성	            |설명	                  |참조
+accept	  |받아들일 수 있는 파일 형식	    |👉 작성 가이드
+multiple	|여러 파일 업로드 가능 여부
+
+@file
+
+#마침표로 시작하는 유효한 파일 이름 확장자. 대소문자를 구분하지 않습니다. 
+예시: .jpg, .pdf, .doc.
+확장자를 포함하지 않은 유효한 MIME 유형 문자열.
+audio/*는 "모든 오디오 파일"을 의미합니다.
+video/*는 "모든 비디오 파일"을 의미합니다.
+image/*는 "모든 이미지 파일"을 의미합니다.
+
+#multiple 옵션을 사용할경우 다수의 파일을 선택할수있다.
+
+특성	            유형	                                    설명
+accept	          file	     |     파일을 업로드 컨트롤에서 기대하는 파일 유형을 암시
+alt	              image	     |     이미지 유형에 대한 대체 속성. accessibiltiy 측면에서 필요.
+autocomplete	    all	       |   양식 자동생성 기능 (form autofill) 암시
+autofocus	        all	       |   페이지가 로딩될때 양식 제어에 오토포커스
+capture	          file	     |     파일 업로드 제어에서 input 방식에서 미디어 capture
+checked	          radio, checkbox	     |   커맨드나 컨트롤이 체크 되었는지의 여부
+dirname	          text, search	       |   양식 전송시 요소의 방향성을 전송할 때 양식 필드의 Name
+disabled	        all	                 |   양식 컨트롤이 비활성화되었는지의 여부
+form	            all	                 |   컨트롤을 양식 요소와 연결
+formaction	      image, submit	       |   양식 전송시 URL 사용하기
+formenctype	      image, submit	       |   양식의 데이터 인코딩 유형이 양식 전송시 사용될 것
+formmethod	      image, submit	       |   양식 전송시 HTTP 방식을 사용
+formnovalidate	  image, submit	       |   양식 전송시 양식 컨트롤 확인을 무시하기
+formtarget	      image, submit	       |   양식 전송시 브라우징 맥락
+height	          image	               |   이미지 높이에서 height 속성과 같음
+list	            almost all	datalist |   자동입력 옵션의 id 속성값
+max	              numeric types	       |   최대값
+maxlength	        password, search, tel, text, url    |	value의 최대 길이 (문자수)
+min	              numeric types	       |    최소값
+minlength	        password, search, tel, text, url	  |  value의 최소 길이 (문자수)
+multiple	        email, file	         |    불리언값. 여러 값을 허용할지의 여부
+name	            all	input            |    양식 컨트롤의 이름. 이름/값 짝(name/value pair)의 일부로서 양식과 함께 전송된다
+pattern	          password, text, tel	 |     value 가 유효하기 위해 일치해야 하는 패턴
+placeholder	      password, search, tel, text, url	  |  양식 컨트롤이 비어있는 때 양식 컨트롤에 나타나는 내용
+readonly (en-US)	almost all	         |     불리언값. 이 값은 수정이 불가능함
+required (en-US)	almost all	         |     불리언값. 양식이 전송되기 위해서 반드시 입력하거나 확인이 필요한 값
+size	            email, password, tel, text	        |   컨트롤의 크기
+src	              image	               |     이미지 출처의 주소에서 src 와 같은 속성
+step	            numeric types	       |     유효한 증분적인 (Incremental)값
+type	            all	input            |     양식 컨트롤의 유형
+value	            all	                 |      양식 컨트롤의 현재 값. 이름/값 짝(name/value pair)의 일부로서 양식과 함께 전송된다
+width	             image	             |     이미지의 width 속성과 같다
+
+-->
+
+<br><br><br>
+
+<label for="valip">value</label> <br>
+<input
+id="valip"
+type="text"
+value="멍텅구리"
+>
+
+<br>
+
+<label for="atpip">autofocus</label> <br>
+<input
+id="atpip"
+type="text"
+placeholder="자동 포커스 됨"
+autofocus
+>
+
+<br>
+
+<label for="rdolip">readonly</label> <br>
+<input
+id="rdolip"
+type="text"
+value="읽기만 가능, 전송됨"
+readonly
+>
+
+<br>
+
+<label for="rqdip">required</label> <br>
+<input
+id="rqdip"
+type="text"
+placeholder="필수입력!!"
+required
+>
+
+<br>
+
+<label for="dsadip">disabled</label> <br>
+<input
+id="dsadip"
+type="text"
+placeholder="입력불가,전송 안됨"
+disabled
+>
+
+<br><br>
+<input
+type="radio"
+name="fruit"
+value="apple"
+id="f_apple"
+checked
+>
+
+
+<label for="f_apple">사과</label>
+
+<input
+type="radio"
+name="fruit"
+value="grape"
+id="f_grape"
+>
+
+
+<label for="f_grape">포도</label>
+
+<input
+type="radio"
+name="fruit"
+value="orange"
+id="f_orange"
+disabled
+>
+
+
+<label for="f_orange">오렌지(품절)</label>
+
+<!--
+
+
+#readonly 와  disabled의 차이점은 값을 전송을 할떄
+readonly는 전송된다는점과 disabled는 전송이 안된다는 점이다.
+
+#submit 은 한폼안에서 이뤄진다.!!
+-->
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
