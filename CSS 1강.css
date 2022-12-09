@@ -1,0 +1,119 @@
+.style-2{
+  color: brown;
+}
+
+/* 모든 요소 선택 */
+
+/* 같은 선택자의 경우 뒤에 오는 것이 우선순위 높음 */
+* {
+  color:
+}
+  
+/* 같은 선택자의 경우 뒤에 오는 것이 우선순위 높음 */
+/* * { 
+  color: plum;
+}
+*/
+/* 태그 선택자 */
+p {
+  color: olivedrab;
+}
+/* 모든 선택자보다 우선순위를 가짐. */
+
+/* class 선택자 */
+/* 태그보다 우선순위 높음 */
+/* 페이지상의 여러 요소가 같은 class를 가질 수 있음 */
+.blue {
+  color: lightblue;
+}
+
+/* 다른 선택자에 이어붙일 수 있음(태그, 클래스 등...) */
+/* 선택자는 구체적일수록 우선순위 높음 */
+
+p.blue {
+  color: burlywood;
+}
+
+.blue.dark {
+  color: red;
+}
+
+/* id 선택자 */
+/* class보다 우선순위 높음 */
+/* id는 페이지상에서 요소마다 고유해야 함 */
+
+#red {
+  color: lightskyblue;
+}
+
+/* 그룹 선택자 */
+span, .dark, #red {
+  text-decoration: underline;
+}
+
+/* 자손 결합자 모든 밑에있는 잔가지들.
+li 의 모든 자식들 */
+.outer li {
+  color: olive;
+}
+
+/* 자식 결합자 (1촌. 바로밑 자손) 
+outer 안에 li */
+.outer > li {
+  color: brown;
+}
+/* outer의 1촌자식의 자식들.
+즉 할아버지 outer와 손자 li */
+.outer > li li {
+  text-decoration: underline;
+}
+/* starter 의 다음 모든것들을 선택 */
+.starter ~ li {
+  font-style: italic;
+}
+/* starter란 클래스 바로 다음것을 선택 */
+.starter + li {
+  font-weight: bold;
+}
+
+/* ol 태그 안에서 첫번쨰 자식과 마지막 자식을 선택
+주가적으로 선택하려면 , 사용 */
+ol li:first-child,
+ol li:last-child {
+  color: yellow;
+}
+
+/* outer 의 직계 자식중 마지막이 아닌것을 선택 */
+.outer > li:not(:last-child) {
+  text-decoration: line-through;
+}
+
+/* ul중에 outer 클래스가 아닌 li 를 선택*/
+ul:not(.outer) li {
+  font-weight: bold;
+}
+
+/* 
+# ol 의 자식 li 중에 3번쨰를 선택
+괄호 안에 몆번쨰를 선택할수있음.
+# 숫자뒤에 n을 붙힌다면 N번쨰번 마다 선택
+Ex) ol li:nth-child(3n)
+=ol의 자식 li 안에서 3번쨰 마다 선택 
+# +를 붙힌다면 그숫자만큼 쉬트프 해줄수있다.
+# odd 는 홀수 / even은 짝수 를 선택
+#, #n, #n+n, odd, even*/
+ol li:nth-child(3n+1) {
+  font-weight: bold;
+  color: pink;
+}
+
+/* 마우스오버 가상클래스
+글자에 마우스를 되면 색상이 나타나면서 선택되는것
+구체적으로 한다면 다른것들도 덮어씌어서 hover를 적용
+시킬수있다.*/
+li:hover,
+ol li:nth-child(3n+1):hover {
+    font-weight: bold;
+    color: lightgreen;
+}
+
