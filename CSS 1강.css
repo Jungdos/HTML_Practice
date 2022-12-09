@@ -109,8 +109,7 @@ ol li:nth-child(3n+1) {
 
 /* 마우스오버 가상클래스
 글자에 마우스를 되면 색상이 나타나면서 선택되는것
-구체적으로 한다면 다른것들도 덮어씌어서 hover를 적용
-시킬수있다.*/
+구체적으로 한다면 다른것들도 덮어씌어서 hover를 적용*/
 li:hover,
 ol li:nth-child(3n+1):hover {
     font-weight: bold;
