@@ -1,0 +1,78 @@
+p {
+  /* normal, italic, oblique */
+  font-style: italic;
+
+  /* normal, bold, 100~900 */
+  font-weight: 600;
+}
+
+p {
+  /* normal, italic, oblique */
+  font-style: oblique;
+
+  /* normal, bold, 100~900 */
+  font-weight: normal;
+}
+
+html { font-size: 14px; }
+div { font-size: 1.5rem; }
+
+/* 부모를 따로 지정해주지않았다면
+기본적으로 HTML을 부모 (기본값)로 설정된다 */
+
+q {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.one {
+  text-decoration: underline;
+}
+
+.two {
+  text-decoration:  overline green;
+}
+
+.tr {
+  text-decoration: wavy underline red;
+}
+/* wavy 란 속성을 통해 물결포시를 할수있다. */
+.fo {
+  text-decoration: line-through;
+}
+
+.cpl {
+  text-transform: capitalize;
+}
+/* capitalize 는 영문일떄 적용되는 옵션이고
+각 단어의 맨앞 단어를 대문자로 적용시켜준다. */
+
+.sd {
+  text-shadow: 2px 2px lightgrey;
+}
+
+.sd2 {
+  text-shadow: 3px -3px 4px red;
+}
+
+.sd3 {
+  text-shadow: 0 1px red,0 -1px red,
+  1px 0 red, -1px 0 red
+  ;
+}
+
+.btsd {
+  text-shadow:
+      /* 안쪽 흰색 그림자 */
+      1px 0 white, -1px 0 white, 0 1px white, 0 -1px white, 
+      1px 1px white, 1px -1px white, -1px 1px white, -1px -1px white,
+  
+      /* 바깥쪽 미국자두색 그림자 */
+      2px 0 green, -2px 0 green, 0 2px green, 0 -2px green,
+      2px 1px green, -2px 1px green, 1px 2px green, 1px -2px green,
+      2px -1px green, -2px -1px green, -1px 2px green, -1px -2px green,
+      2px 2px green, 2px -2px green, -2px 2px green, -2px -2px green;
+  };
+/* 흰색 그림자로 1칸을 씌운뒤 그위에 초록 그람자로 씌운모습이다.
+위아래 좌우. 대각선까지 다채운다면 이렇게 입체적인 글자를 만들어낼수도 있다.
+ */
