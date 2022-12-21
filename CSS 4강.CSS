@@ -1,0 +1,22 @@
+.key {
+  color: red;
+}
+
+.RGB {
+  color: rgb(170, 185, 30);
+}
+
+.HEX {
+  color: #540404;
+}
+
+.HSL {
+  color: hsl(348, 65%, 50%);
+}
+.Bak {
+  background-color: aqua;
+}
+
+.Bak2 {
+  background-color: aquamarine;
+}
