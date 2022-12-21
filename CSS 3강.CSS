@@ -1,0 +1,36 @@
+p {
+  /* left, center, right, justify */
+  /* 문단의 정령방식 설정하기
+    justify는 왼쪽으로 정렬하면서, 텍스트가 여러 줄이 될 때 마지막 줄을 제외한 줄들의 오른쪽이 나란히 되도록 각 줄의 공간을 조절*/
+
+  text-align: center;
+
+  letter-spacing: 1px;
+
+  /* 자간 */
+
+  word-spacing: 0.5em;
+
+  /* 단어 간격 */
+
+  line-height: 2em;
+
+  /* 줄 높이 */
+
+  text-indent: 3em; 
+}
+
+  /* 들여쓰기/ - 로할경우는 내여쓰기 */
+
+
+  /* li별로 지정하는 것도 가능 */
+  ul > li:first-child {
+    list-style: upper-roman
+  }
+
+  ol > li:last-child {
+    list-style: square
+  
+  }
+
+
