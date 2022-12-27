@@ -1,0 +1,47 @@
+p {
+  background-color: lightblue;
+  margin: 1vw 3vh;
+  padding-bottom: 3vmax;
+}
+
+/* 마진갑을 분명 아래만 줬는데 
+윗쪽의 마진이 남겨져있을경우
+기본브라우져값을 계산해서 위처럼 입력해보자.
+#4가지 일경우 위 왼쪽 밑 오른쪽 
+#3가지 일경우 위 양쪽 아래
+#2가지 일경우 위아래 양옆 순서이다. */
+
+/* 특정방향에만 주고싶을떄 아래처럼 
+방향을 입력하면 된다
+EX) padding-left */
+p.special { 
+  margin-top: 24px
+  /* margin-bottom: */
+  /* margin-left: */
+  /* margin-right: */
+
+  /* padding-top */
+  /* padding-bottom */
+  /* padding-left */
+  /* padding-right */
+}
+
+/* 위처럼 special class에 따로 마진값,패딩값을 넣어주고싶다면 위처럼 입력하면 된다. */
+
+body {
+  text-align: center;
+}
+
+div {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: orangered;
+  margin: 0 auto;
+}
+
+/* inlune 요소는 텍스트를 따라가기 떄문에
+마진 오토값으로 가운데 정렬이 안된다
+그래서 그위에 부모인 바디 쪽에다가 
+text-align : center 를 넣어줘서 가운데로 
+모아봤다. */
